@@ -1,0 +1,29 @@
+[project]
+name = "tts"
+version = "0.1.0"
+description = "Generate high-fidelity speech audio using text to speech with voice cloning and subtitles."
+readme = "Readme.md"
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub>=1.8.0",
+    "librosa>=0.11.0",
+    "mlx>=0.31.1",
+    "mlx-audio>=0.4.1",
+    "mlx-lm>=0.31.1",
+    "numpy>=2.4.3",
+    "scipy>=1.17.1",
+    "soundfile>=0.13.1",
+    "transformers>=5.3.0",
+]
+
+[project.scripts]
+tts = "tts.tts:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
