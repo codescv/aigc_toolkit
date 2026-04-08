@@ -1,23 +1,32 @@
 [project]
-name = "tts"
+name = "aigc_toolkit"
 version = "0.1.0"
-description = "Generate high-fidelity speech audio using text to speech with voice cloning and subtitles."
+description = "Collection of AIGC tools including image/video generation and TTS."
 readme = "Readme.md"
 requires-python = ">=3.12"
 dependencies = [
+    "google-genai>=0.3.0",
     "huggingface-hub>=1.8.0",
     "librosa>=0.11.0",
     "mlx>=0.31.1",
     "mlx-audio>=0.4.1",
     "mlx-lm>=0.31.1",
     "numpy>=2.4.3",
+    "opencv-python>=4.11.0",
+    "pillow>=11.1.0",
+    "pyopenssl>=24.3.0",
+    "pysrt>=1.1.2",
+    "requests>=2.32.3",
     "scipy>=1.17.1",
     "soundfile>=0.13.1",
     "transformers>=5.3.0",
 ]
 
 [project.scripts]
-tts = "tts.tts:main"
+tts = "aigc_toolkit.tts:main"
+burn_subtitles = "aigc_toolkit.burn_subtitles:main"
+generate_image = "aigc_toolkit.generate_image:main"
+generate_video = "aigc_toolkit.generate_video:main"
 
 [build-system]
 requires = ["hatchling"]

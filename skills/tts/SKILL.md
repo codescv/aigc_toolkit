@@ -3,9 +3,9 @@ name: tts
 description: "Generate high-fidelity speech audio using text to speech with voice cloning and subtitles."
 ---
 
-# Installation
-If not installed, install it first with:
-`which tts || uv tool install --default-index https://pypi.org/simple git+https://github.com/codescv/tts`.
+# Prerequisites
+Make sure `tts` command is installed first with:
+`which tts || uv tool install --default-index https://pypi.org/simple git+https://github.com/codescv/aigc_toolkit`.
 
 # Parameters
 - `--text`: The target text to synthesize. For best quality, you need to split the text into chunks using newlines (`\n`), where each

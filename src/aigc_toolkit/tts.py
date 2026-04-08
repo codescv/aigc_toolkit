@@ -1,3 +1,6 @@
+"""
+Unified TTS generation on MLX.
+"""
 import sys
 import os
 import shutil
