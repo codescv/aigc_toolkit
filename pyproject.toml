@@ -20,6 +20,7 @@ dependencies = [
     "scipy>=1.17.1",
     "soundfile>=0.13.1",
     "transformers>=5.3.0",
+    "mlx-whisper>=0.4.0",
 ]
 
 [project.scripts]
@@ -27,6 +28,7 @@ tts = "aigc_toolkit.tts:main"
 burn_subtitles = "aigc_toolkit.burn_subtitles:main"
 generate_image = "aigc_toolkit.generate_image:main"
 generate_video = "aigc_toolkit.generate_video:main"
+stt = "aigc_toolkit.stt:main"
 
 [build-system]
 requires = ["hatchling"]

@@ -32,17 +32,6 @@ Generate image-to-video (animate an image):
 Use the `tts` skill to generate speech and subtitles.
 - Use the `--srt` parameter in the `tts` skill to get the subtitle file directly.
 
-# Lip-Sync (Talking Head)
-Run the `wav2lip` command to synchronize mouth movements to an audio file.
-Make sure it's installed with:
-`which wav2lip || uv tool install --default-index https://pypi.org/simple git+https://github.com/codescv/Easy-Wav2Lip-MacOS --python 3.10`
-
-## Arguments:
-- `--face`: Filepath of video/image that contains faces to use.
-- `--audio`: Filepath of video/audio file to use as raw audio source.
-- `--outfile`: Video path to save result.
-- `--quality`: Choose Improved by default.
-
 # Burning Subtitles
 Run `burn_subtitles` instead of raw `ffmpeg` filters.
 Raw `ffmpeg` does NOT handle automatic line wrapping, which causes text to overflow.
@@ -53,8 +42,8 @@ This script uses `PingFang.ttc` or `Heiti` by default for excellent CJK/Japanese
 - `--srt_path`: Output SRT subtitle path
 - `--out_path`: Output video path
 
-# Merge Video and (Talking) Audio (Without Lip Sync)
-When making videos with voiceover, it's useful to loop the video and merge the audio with this command:
+# Merge Video and Talking Audio
+When making videos with talking video without lip sync, it's useful to loop the video and merge the audio with this command:
 
 ```bash
 ffmpeg -y -stream_loop -1 -i "<video_path>" -i "<speech_audio_path>" -c:v libx264 -crf 28 -preset fast -c:a aac -map 0:v:0 -map 1:a:0 -shortest -fflags +genpts "<output_video_path>"

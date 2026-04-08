@@ -1,7 +1,8 @@
-# TTS
+# aigc_toolkit
 
-This is a tiny CLI tool for text to speech with voice cloning and subtitles.
-For use with AI Agents, just copy [SKILL.md](SKILL.md) to your agent's skill directory.
-
-# Development
-`uv run tts --help`.
+A collection of AIGC tools:
+- `generate_image`: Generate images using Nano Banana.
+- `generate_video`: Generate videos using Veo.
+- `tts`: Generate speech from text with voice cloning.
+- `stt`: Transcribe speech to text.
+- `burn_subtitles`: Burn subtitles into video.
